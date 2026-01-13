@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stjepan Velc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="https://github.com/StjepanVelc" target="_blank" class="profile-link">
+            <img src="https://github.com/StjepanVelc.png" alt="Stjepan Velc" class="profile-image">
+        </a>
+        <h1 class="name-shadow">Stjepan Velc</h1>
+        <p>Računalstvo • programiranje • znanost</p>
+        <div id="datetime" class="datetime"></div>
+    </header>
+
+    <main class="content">
+
+        <section id="about">
+            <h2>O meni</h2>
+            <p>
+                Zanima me računalna znanost, matematika i način na koji se
+                složeni sustavi mogu razumjeti kroz modele i algoritme.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projekti</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3><a href="https://github.com/StjepanVelc/quantum_data_engine" target="_blank">Quantum Data
+                            Engine</a></h3>
+                    <p>Quantum-inspired data engine sa graph-based node interakcijama, search indexing, WAL storage
+                        recovery i animiranom vizualizacijom.</p>
+                    <span class="project-lang">Python • MIT License</span>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/StjepanVelc/graph_dynamics_lab" target="_blank">Graph Dynamics
+                            Lab</a></h3>
+                    <p>Quantum-inspired simulacija i vizualizacija dinamike grafova.</p>
+                    <span class="project-lang">Python • MIT License</span>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/StjepanVelc/quantum_sync_simulator" target="_blank">Quantum Sync
+                            Simulator</a></h3>
+                    <p>Simulacija dva entangled qubita korištenjem Python, Qiskit i Matplotlib.</p>
+                    <span class="project-lang">Python • MIT License</span>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/StjepanVelc/stipe_matrix" target="_blank">Stipe Matrix</a></h3>
+                    <p>Jednostavna i edukativna Python matrix biblioteka napravljena od nule.</p>
+                    <span class="project-lang">Python • MIT License</span>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/StjepanVelc/VISUAL_MATRICA" target="_blank">Visual Matrica</a></h3>
+                    <p>Python projekt za vizualizaciju matrica.</p>
+                    <span class="project-lang">Python</span>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/StjepanVelc/versus_centar_flask" target="_blank">Versus Centar
+                            Flask</a></h3>
+                    <p>Web aplikacija napravljena u Flask frameworku.</p>
+                    <span class="project-lang">HTML</span>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/StjepanVelc/onlline_shoping" target="_blank">Online Shopping</a>
+                    </h3>
+                    <p>Python projekt za online shopping sustav.</p>
+                    <span class="project-lang">Python</span>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/StjepanVelc/student_system" target="_blank">Student System</a></h3>
+                    <p>Sustav za upravljanje studentskim podacima.</p>
+                    <span class="project-lang">Python</span>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/StjepanVelc/online_sales_analysis" target="_blank">Online Sales
+                            Analysis</a></h3>
+                    <p>Finalni projekt - analiza online prodaje.</p>
+                    <span class="project-lang">Python</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Pošaljite mi poruku:</p>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Vaše ime" required>
+                <input type="email" name="email" placeholder="Vaš email" required>
+                <textarea name="message" placeholder="Vaša poruka" rows="5" required></textarea>
+                <button type="submit">Pošalji</button>
+            </form>
+            <p class="email-link">Ili me kontaktirajte direktno: <a
+                    href="mailto:stjepan.velc@mail.com">stjepan.velc@mail.com</a></p>
+            <p>GitHub: <a href="https://github.com/StjepanVelc" target="_blank">github.com/StjepanVelc</a></p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Stjepan Velc</p>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+
+            };
+            document.getElementById('datetime').textContent = now.toLocaleDateString('hr-HR', options);
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+
+</body>
+
+</html>
