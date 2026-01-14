@@ -119,12 +119,13 @@
         <section id="contact">
             <h2>Kontakt</h2>
             <p>Pošaljite mi poruku:</p>
-            <form action="https://formspree.io/f/xnjjqwpv" method="POST" class="contact-form">
+            <form id="contactForm" class="contact-form">
                 <input type="text" name="name" placeholder="Vaše ime" required>
                 <input type="email" name="email" placeholder="Vaš email" required>
                 <textarea name="message" placeholder="Vaša poruka" rows="5" required></textarea>
                 <button type="submit">Pošalji</button>
             </form>
+            <div id="formMessage" class="form-message"></div>
             <p class="email-link">Ili me kontaktirajte direktno: <a
                     href="mailto:stjepan.velc@mail.com">stjepan.velc@mail.com</a></p>
             <p>GitHub: <a href="https://github.com/StjepanVelc" target="_blank">github.com/StjepanVelc</a></p>
@@ -150,6 +151,53 @@
         }
         updateDateTime();
         setInterval(updateDateTime, 1000);
+
+        // Kontakt forma handler
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = {
+                name: this.name.value,
+                email: this.email.value,
+                message: this.message.value
+            };
+
+            const messageDiv = document.getElementById('formMessage');
+            const submitButton = this.querySelector('button[type="submit"]');
+
+            // Disable button i prikaži loading
+            submitButton.disabled = true;
+            submitButton.textContent = 'Šaljem...';
+            messageDiv.textContent = '';
+            messageDiv.className = 'form-message';
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    messageDiv.textContent = '✓ ' + result.message;
+                    messageDiv.classList.add('success');
+                    this.reset();
+                } else {
+                    messageDiv.textContent = '✗ ' + result.message;
+                    messageDiv.classList.add('error');
+                }
+            } catch (error) {
+                messageDiv.textContent = '✗ Greška pri slanju poruke. Pokušajte ponovno.';
+                messageDiv.classList.add('error');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Pošalji';
+            }
+        });
     </script>
 
 </body>

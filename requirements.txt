@@ -1,0 +1,2 @@
+# Python packages za Vercel serverless funkciju
+pymongo[srv]>=4.6.0
