@@ -15,22 +15,23 @@
             <img src="https://github.com/StjepanVelc.png" alt="Stjepan Velc" class="profile-image">
         </a>
         <h1 class="name-shadow">Stjepan Velc</h1>
-        <p>Software Developer • Backend Engineering • System Design</p>
+        <p data-i18n="header.subtitle">Software Developer • Backend Engineering • System Design</p>
         <div id="datetime" class="datetime"></div>
+        <button id="langToggle" class="lang-toggle" type="button">ENG</button>
     </header>
 
     <main class="content">
 
         <!-- ABOUT -->
         <section id="about">
-            <h2>O meni</h2>
-            <p>
+            <h2 data-i18n="about.title">O meni</h2>
+            <p data-i18n="about.p1">
                 Software developer s fokusom na backend razvoj, arhitekturu aplikacija i izgradnju
                 skalabilnih sustava. Kroz projekte radim s REST API-jima, mikroservisnom arhitekturom,
                 cache mehanizmima, relacijskim bazama podataka, kontejnerizacijom i principima
                 sistemskog dizajna.
             </p>
-            <p>
+            <p data-i18n="about.p2">
                 Posebno me zanimaju stabilnost sustava, obrada podataka, jasna arhitektura aplikacija
                 i rješavanje stvarnih problema kroz pouzdana backend rješenja.
             </p>
@@ -38,7 +39,7 @@
 
         <!-- PROJECTS -->
         <section id="projects">
-            <h2>Projekti</h2>
+            <h2 data-i18n="projects.title">Projekti</h2>
             <div class="projects-grid">
 
                 <div class="project-card">
@@ -51,7 +52,7 @@
                         Implementira API Gateway, Redis cache-aside strategiju, gRPC komunikaciju,
                         PostgreSQL i Docker infrastrukturu.
                     </p>
-                    <span class="project-highlight">Featured</span>
+                    <span class="project-highlight" data-i18n="projects.featured">Featured</span>
                     <span class="project-lang">Python • FastAPI • PostgreSQL • Redis • gRPC • Docker • Nginx</span>
                 </div>
 
@@ -59,7 +60,8 @@
                     <h3><a href="https://github.com/StjepanVelc/Decision-Engine-API" target="_blank"
                             rel="noopener noreferrer">Decision
                             Engine API</a></h3>
-                    <p>Rule-based decision engine API s audit trail sustavom, dizajniran za evaluaciju poslovnih pravila
+                    <p data-i18n="projects.decisionEngine.desc">Rule-based decision engine API s audit trail sustavom,
+                        dizajniran za evaluaciju poslovnih pravila
                         i donošenje odluka
                         uz potpunu sljedivost i skalabilnu arhitekturu.</p>
                     <span class="project-lang">Python • FastAPI • PostgreSQL • SQLAlchemy • Docker</span>
@@ -68,7 +70,8 @@
                 <div class="project-card">
                     <h3><a href="https://github.com/StjepanVelc/smartshop" target="_blank"
                             rel="noopener noreferrer">SmartShop</a></h3>
-                    <p>Desktop sustav za upravljanje zalihama i narudžbama s tro-slojnom arhitekturom, validacijom
+                    <p data-i18n="projects.smartshop.desc">Desktop sustav za upravljanje zalihama i narudžbama s
+                        tro-slojnom arhitekturom, validacijom
                         podataka i atomskim transakcijama.</p>
                     <span class="project-lang">Python • Tkinter • SQLite • Docker</span>
                 </div>
@@ -77,7 +80,8 @@
                     <h3><a href="https://github.com/StjepanVelc/onlline_shoping" target="_blank"
                             rel="noopener noreferrer">Online Shopping API</a>
                     </h3>
-                    <p>REST API za e-commerce s JWT autentifikacijom, upravljanjem korisnicima i serverskom obradom
+                    <p data-i18n="projects.onlineShopping.desc">REST API za e-commerce s JWT autentifikacijom,
+                        upravljanjem korisnicima i serverskom obradom
                         narudžbi.</p>
                     <span class="project-lang">Python • FastAPI • SQLite • JWT</span>
                 </div>
@@ -85,7 +89,8 @@
                 <div class="project-card">
                     <h3><a href="https://github.com/StjepanVelc/VisualQuantumSuite" target="_blank"
                             rel="noopener noreferrer">VisualQuantumSuite</a></h3>
-                    <p>Modularna desktop aplikacija koja povezuje C# frontend i Python simulacije kroz multi-process
+                    <p data-i18n="projects.vqs.desc">Modularna desktop aplikacija koja povezuje C# frontend i Python
+                        simulacije kroz multi-process
                         arhitekturu.</p>
                     <span class="project-lang">C# • .NET • Python</span>
                 </div>
@@ -95,21 +100,22 @@
 
         <!-- EXPERIMENTS -->
         <section id="experiments">
-            <h2>Eksperimentalni projekti</h2>
+            <h2 data-i18n="experiments.title">Eksperimentalni projekti</h2>
             <div class="projects-grid">
 
                 <div class="project-card">
                     <h3><a href="https://github.com/StjepanVelc/quantum_sync_simulator" target="_blank"
                             rel="noopener noreferrer">Quantum Sync
                             Simulator</a></h3>
-                    <p>Eksperimentalna simulacija kvantnih sustava i vizualizacija dinamike.</p>
+                    <p data-i18n="experiments.quantum.desc">Eksperimentalna simulacija kvantnih sustava i vizualizacija
+                        dinamike.</p>
                     <span class="project-lang">Python</span>
                 </div>
 
                 <div class="project-card">
                     <h3><a href="https://github.com/StjepanVelc/stipe_matrix" target="_blank"
                             rel="noopener noreferrer">Stipe Matrix</a></h3>
-                    <p>Edukativna implementacija matričnih operacija od nule.</p>
+                    <p data-i18n="experiments.matrix.desc">Edukativna implementacija matričnih operacija od nule.</p>
                     <span class="project-lang">Python</span>
                 </div>
 
@@ -118,24 +124,26 @@
 
         <!-- CONTACT -->
         <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Pošaljite mi poruku:</p>
+            <h2 data-i18n="contact.title">Kontakt</h2>
+            <p data-i18n="contact.prompt">Pošaljite mi poruku:</p>
 
             <form id="contactForm" class="contact-form">
-                <input type="text" name="name" placeholder="Vaše ime" required>
-                <input type="email" name="email" placeholder="Vaš email" required>
-                <textarea name="message" placeholder="Vaša poruka" rows="5" required></textarea>
-                <button type="submit">Pošalji</button>
+                <input type="text" name="name" placeholder="Vaše ime" data-i18n-placeholder="contact.name" required>
+                <input type="email" name="email" placeholder="Vaš email" data-i18n-placeholder="contact.email" required>
+                <textarea name="message" placeholder="Vaša poruka" data-i18n-placeholder="contact.message" rows="5"
+                    required></textarea>
+                <button type="submit" data-i18n="contact.send">Pošalji</button>
             </form>
 
             <div id="formMessage" class="form-message"></div>
 
             <p class="email-link">
-                Ili direktno: <a href="mailto:stjepan.velc@gmail.com">stjepan.velc@gmail.com</a>
+                <span data-i18n="contact.direct">Ili direktno:</span> <a
+                    href="mailto:stjepan.velc@gmail.com">stjepan.velc@gmail.com</a>
             </p>
 
             <p>
-                GitHub: <a href="https://github.com/StjepanVelc" target="_blank"
+                <span data-i18n="contact.github">GitHub:</span> <a href="https://github.com/StjepanVelc" target="_blank"
                     rel="noopener noreferrer">github.com/StjepanVelc</a>
             </p>
         </section>
@@ -147,6 +155,93 @@
     </footer>
 
     <script>
+        function detectInitialLanguage() {
+            const saved = localStorage.getItem('siteLang');
+            if (saved) {
+                return saved;
+            }
+
+            const browserLang = (navigator.language || '').toLowerCase();
+            return browserLang.startsWith('en') ? 'en' : 'hr';
+        }
+
+        let currentLang = detectInitialLanguage();
+
+        const translations = {
+            en: {
+                'header.subtitle': 'Software Developer • Backend Engineering • System Design',
+                'about.title': 'About Me',
+                'about.p1': 'Software developer focused on backend development, application architecture, and building scalable systems. Through projects, I work with REST APIs, microservice architecture, caching mechanisms, relational databases, containerization, and system design principles.',
+                'about.p2': 'I am especially interested in system stability, data processing, clear application architecture, and solving real-world problems through reliable backend solutions.',
+                'projects.title': 'Projects',
+                'projects.featured': 'Featured',
+                'projects.decisionEngine.desc': 'Rule-based decision engine API with an audit trail system, designed for business rule evaluation and decision making with full traceability and scalable architecture.',
+                'projects.smartshop.desc': 'Desktop system for inventory and order management with a three-layer architecture, data validation, and atomic transactions.',
+                'projects.onlineShopping.desc': 'REST API for e-commerce with JWT authentication, user management, and server-side order processing.',
+                'projects.vqs.desc': 'Modular desktop application that connects a C# frontend and Python simulations through a multi-process architecture.',
+                'experiments.title': 'Experimental Projects',
+                'experiments.quantum.desc': 'Experimental simulation of quantum systems and dynamics visualization.',
+                'experiments.matrix.desc': 'Educational implementation of matrix operations from scratch.',
+                'contact.title': 'Contact',
+                'contact.prompt': 'Send me a message:',
+                'contact.name': 'Your name',
+                'contact.email': 'Your email',
+                'contact.message': 'Your message',
+                'contact.send': 'Send',
+                'contact.direct': 'Or directly:',
+                'contact.github': 'GitHub:'
+            },
+            hr: {
+                'header.subtitle': 'Software Developer • Backend Engineering • System Design',
+                'about.title': 'O meni',
+                'about.p1': 'Software developer s fokusom na backend razvoj, arhitekturu aplikacija i izgradnju skalabilnih sustava. Kroz projekte radim s REST API-jima, mikroservisnom arhitekturom, cache mehanizmima, relacijskim bazama podataka, kontejnerizacijom i principima sistemskog dizajna.',
+                'about.p2': 'Posebno me zanimaju stabilnost sustava, obrada podataka, jasna arhitektura aplikacija i rješavanje stvarnih problema kroz pouzdana backend rješenja.',
+                'projects.title': 'Projekti',
+                'projects.featured': 'Featured',
+                'projects.decisionEngine.desc': 'Rule-based decision engine API s audit trail sustavom, dizajniran za evaluaciju poslovnih pravila i donošenje odluka uz potpunu sljedivost i skalabilnu arhitekturu.',
+                'projects.smartshop.desc': 'Desktop sustav za upravljanje zalihama i narudžbama s tro-slojnom arhitekturom, validacijom podataka i atomskim transakcijama.',
+                'projects.onlineShopping.desc': 'REST API za e-commerce s JWT autentifikacijom, upravljanjem korisnicima i serverskom obradom narudžbi.',
+                'projects.vqs.desc': 'Modularna desktop aplikacija koja povezuje C# frontend i Python simulacije kroz multi-process arhitekturu.',
+                'experiments.title': 'Eksperimentalni projekti',
+                'experiments.quantum.desc': 'Eksperimentalna simulacija kvantnih sustava i vizualizacija dinamike.',
+                'experiments.matrix.desc': 'Edukativna implementacija matričnih operacija od nule.',
+                'contact.title': 'Kontakt',
+                'contact.prompt': 'Pošaljite mi poruku:',
+                'contact.name': 'Vaše ime',
+                'contact.email': 'Vaš email',
+                'contact.message': 'Vaša poruka',
+                'contact.send': 'Pošalji',
+                'contact.direct': 'Ili direktno:',
+                'contact.github': 'GitHub:'
+            }
+        };
+
+        function setLanguage(lang) {
+            const selected = translations[lang] ? lang : 'hr';
+            const i18n = translations[selected];
+
+            document.documentElement.lang = selected;
+
+            document.querySelectorAll('[data-i18n]').forEach((el) => {
+                const key = el.dataset.i18n;
+                if (i18n[key]) {
+                    el.textContent = i18n[key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+                const key = el.dataset.i18nPlaceholder;
+                if (i18n[key]) {
+                    el.placeholder = i18n[key];
+                }
+            });
+
+            document.getElementById('langToggle').textContent = selected === 'hr' ? 'ENG' : 'HR';
+            currentLang = selected;
+            localStorage.setItem('siteLang', selected);
+            updateDateTime();
+        }
+
         function updateDateTime() {
             const now = new Date();
             const options = {
@@ -156,11 +251,15 @@
                 day: 'numeric'
             };
             document.getElementById('datetime').textContent =
-                now.toLocaleDateString('hr-HR', options);
+                now.toLocaleDateString(currentLang === 'en' ? 'en-US' : 'hr-HR', options);
         }
 
-        updateDateTime();
+        setLanguage(currentLang);
         setInterval(updateDateTime, 1000);
+
+        document.getElementById('langToggle').addEventListener('click', function () {
+            setLanguage(currentLang === 'hr' ? 'en' : 'hr');
+        });
 
         document.getElementById('contactForm').addEventListener('submit', async function (e) {
             e.preventDefault();
@@ -175,7 +274,7 @@
             const submitButton = this.querySelector('button');
 
             submitButton.disabled = true;
-            submitButton.textContent = 'Šaljem...';
+            submitButton.textContent = currentLang === 'en' ? 'Sending...' : 'Šaljem...';
 
             try {
                 const response = await fetch('/api/contact', {
@@ -187,20 +286,20 @@
                 const result = await response.json();
 
                 if (result.success) {
-                    messageDiv.textContent = '✓ Poruka poslana';
+                    messageDiv.textContent = currentLang === 'en' ? '✓ Message sent' : '✓ Poruka poslana';
                     messageDiv.className = 'form-message success';
                     this.reset();
                 } else {
-                    messageDiv.textContent = '✗ Greška';
+                    messageDiv.textContent = currentLang === 'en' ? '✗ Error' : '✗ Greška';
                     messageDiv.className = 'form-message error';
                 }
             } catch {
-                messageDiv.textContent = '✗ Greška pri slanju';
+                messageDiv.textContent = currentLang === 'en' ? '✗ Sending failed' : '✗ Greška pri slanju';
                 messageDiv.className = 'form-message error';
             }
 
             submitButton.disabled = false;
-            submitButton.textContent = 'Pošalji';
+            submitButton.textContent = currentLang === 'en' ? 'Send' : 'Pošalji';
         });
     </script>
 
